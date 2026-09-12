@@ -14,16 +14,13 @@
                 "-o",
                 "${workspaceFolder}\\StudentManagementSystem.exe"
             ],
-            "options": {
-                "cwd": "${workspaceFolder}"
-            },
-            "problemMatcher": [
-                "$gcc"
-            ],
             "group": {
                 "kind": "build",
                 "isDefault": true
-            }
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
         }
     ]
 }

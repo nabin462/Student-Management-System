@@ -11,5 +11,6 @@ class Student{
     public:
     void get();
     void display();
+    int getid();
 };
 #endif

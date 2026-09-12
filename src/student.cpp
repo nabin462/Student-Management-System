@@ -9,3 +9,6 @@ void Student::get(){
 void Student::display(){
     cout<<"Name:"<<name<<"\t"<<"Age:"<<age<<"\t"<<"Id:"<<id<<"\t"<<"Course:"<<course<<endl;
 }
+int Student::getid(){
+    return id;
+}
