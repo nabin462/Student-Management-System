@@ -12,7 +12,8 @@ int main(){
         cout<<"1: add student"<<endl;
         cout<<"2: display all student"<<endl;
         cout<<"3: search student"<<endl;
-        cout<<"4: Exit"<<endl;
+        cout<<"4: Delete student"<<endl;
+        cout<<"5: Exit"<<endl;
         cout<<"Enter your choice"<<endl;
         cin>>choice;
         switch(choice){
@@ -47,8 +48,30 @@ int main(){
       }
     }
      break;
+
+     case 4:{
+     int uid;
+     cout<<"enter the student id"<<endl;
+     cin>>uid;
+     bool found=false;
+     for(size_t i=0;i<students.size();i++){
+      if(uid==students[i].getid()){
+        students.erase(students.begin()+i);
+        cout<<"student is delete sucessfully"<<endl;
+        found =true;
+      break;
+
+      }
+      
+     }
+
+     if(!found){
+      cout<<"student is not found"<<endl;
+     }
+    }
+     break;
      
-     case 4:
+     case 5:
      exit(0);
      
 
