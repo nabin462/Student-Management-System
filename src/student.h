@@ -12,5 +12,6 @@ class Student{
     void get();
     void display();
     int getid();
+    
 };
 #endif

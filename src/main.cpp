@@ -17,6 +17,15 @@ int main(){
         cout<<"6: Exit"<<endl;
         cout<<"Enter your choice"<<endl;
         cin>>choice;
+          if(cin.fail()){
+            cout<<"enter the number only not character"<<endl;
+            cin.clear();
+            cin.ignore(1000,'\n');
+            continue;
+
+          }
+
+        
         switch(choice){
             case 1:
           s.get();
