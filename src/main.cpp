@@ -27,9 +27,24 @@ int main(){
 
         
         switch(choice){
-            case 1:
+            case 1:{
           s.get();
+          bool duplicate=false;
+          for(size_t i=0;i<students.size();i++){
+            if(s.getid()==students[i].getid())
+            {
+              cout<<"enter other id because it already exist"<<endl;
+              duplicate=true;
+              break;
+            }
+            
+          }
+          if(!duplicate){
+          
     students.push_back(s);
+          }
+        }
+          
     break;
 
     case 2:
@@ -39,6 +54,7 @@ int main(){
 
      }
      break;
+
      case 3:
      {
      cout<<"enter student id"<<endl;

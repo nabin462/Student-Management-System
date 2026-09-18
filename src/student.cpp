@@ -35,6 +35,7 @@ void Student::get(){
     if( input_valid()){
         if(id<0){
             cout<<"enter the id greater than 0"<<endl;
+            
             goto up;
         }
     break;
