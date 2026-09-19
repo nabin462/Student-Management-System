@@ -107,4 +107,59 @@ bool Student::input_cour(){
     return true;
   
 }
+ int Student::update(){
+    
+    while (true){
+    
+    cout<<"enter your name"<<endl;
+    cin>>name;
+   if(input_char()){
+    break;
+
+   }
+
+    }
+
+    while(true){
+         above:
+    cout<<"enter the age"<<endl;
+    cin>>age;
+   if( input_valid()){
+    if(age<0){
+        cout<<"enter age between 1-100"<<endl;
+        goto above;
+    }
+    break;
+   }
+    }
+int newid;
+    while(true){
+    up:
+    cout<<"enter the id"<<endl;
+    cin>>newid;
+
+    if(input_valid()){
+        if(newid<0){
+            cout<<"enter the id greater than 0"<<endl;
+            goto up;
+        }
+        break;
+    }
+}
+
+   while ((true))
+    {
+           cout<<"enter the course"<<endl;
+    cin>>course;
+    if(input_cour()){
+         break;
+    }; 
+
+}
+return id;
+
+
+
+
+ }
     

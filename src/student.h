@@ -15,6 +15,7 @@ class Student{
     bool input_valid();
     bool input_char();
     bool input_cour();
+    int update();
     
 };
 #endif

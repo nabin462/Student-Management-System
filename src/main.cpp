@@ -109,7 +109,8 @@ int main(){
      for(size_t i=0;i<students.size();i++){
      if(sid==students[i].getid()){
       cout<<"student is found"<<endl;
-      students[i].get();
+     int newid= students[i].update();
+     bool duplicate=false;
       found=true;
       break;
 
@@ -120,7 +121,9 @@ int main(){
       cout<<"student is not fond"<<endl;
     }
   }
+  
      break;
+
      
      case 6:
      exit(0);
