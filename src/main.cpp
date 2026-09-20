@@ -99,31 +99,52 @@ int main(){
     }
      break;
 
-     case 5:
-     {
-     int sid;
-    
-     cout<<"enter the student id"<<endl;
-     cin>>sid;
-      bool found=false;
-     for(size_t i=0;i<students.size();i++){
-     if(sid==students[i].getid()){
-      cout<<"student is found"<<endl;
-     int newid= students[i].update();
-     bool duplicate=false;
-      found=true;
-      break;
+    case 5:
+{
+    int sid;
 
-     }
+    cout << "enter the student id" << endl;
+    cin >> sid;
 
+    bool found = false;
+
+    for(size_t i = 0; i < students.size(); i++){
+
+        if(sid == students[i].getid()){
+
+            cout << "student is found" << endl;
+
+            int newid = students[i].getnewid();
+
+            bool duplicate = false;
+
+            for(size_t j = 0; j < students.size(); j++){
+
+                if(j != i && newid == students[j].getid()){
+                    duplicate = true;
+                    break;
+                }
+            }
+
+            if(duplicate){
+                cout << "enter other id because it already exists" << endl;
+               
+            }
+            else{
+                // update student
+                 students[i].setid( newid);
+            }
+
+            found = true;
+            break;
+        }
     }
+
     if(!found){
-      cout<<"student is not fond"<<endl;
+        cout << "student is not fond" << endl;
     }
-  }
-  
-     break;
-
+}
+break;
      
      case 6:
      exit(0);

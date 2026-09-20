@@ -132,34 +132,42 @@ bool Student::input_cour(){
     break;
    }
     }
-int newid;
-    while(true){
-    up:
-    cout<<"enter the id"<<endl;
-    cin>>newid;
 
-    if(input_valid()){
-        if(newid<0){
-            cout<<"enter the id greater than 0"<<endl;
-            goto up;
-        }
-        break;
-    }
-}
 
    while ((true))
     {
            cout<<"enter the course"<<endl;
     cin>>course;
     if(input_cour()){
+
          break;
     }; 
 
 }
-return id;
 
 
+ }
+
+ int Student::getnewid(){
+    int newid;
+    while(true){
+   // up:
+    cout<<"enter the id"<<endl;
+    cin>>newid;
+
+    if(input_valid()){
+        if(newid<0){
+            cout<<"enter the id greater than 0"<<endl;
+           // goto up;
+           continue;
+        }
+        return newid;
+    }
+}
+ }
 
 
+ void Student::setid(int newid){
+    id=newid;
  }
     

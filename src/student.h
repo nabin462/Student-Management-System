@@ -16,6 +16,7 @@ class Student{
     bool input_char();
     bool input_cour();
     int update();
-    
+    int getnewid();
+    void setid(int newid);
 };
 #endif
