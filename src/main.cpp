@@ -107,43 +107,66 @@ int main(){
     cin >> sid;
 
     bool found = false;
+    bool updating=true;
 
     for(size_t i = 0; i < students.size(); i++){
 
         if(sid == students[i].getid()){
+          
 
             cout << "student is found" << endl;
+               found = true;
+            int option;
+            while(updating){
+            cout<<"what do you want to update?"<<endl;
+            cout<<"1: name"<<endl;
+            cout<<"2: ID"<<endl;
+            cout<<"3: Age"<<endl;
+            cout<<"4: Course"<<endl;
+            cout<<"5:Back"<<endl;
+            cout<<"enter the option"<<endl;
+            cin>>option;
+            switch (option)
+            
+            {
+            case 1:
+              /* code */
+              break;
 
-            int newid = students[i].getnewid();
+              case 2:
+              break;
 
-            bool duplicate = false;
+              case 3:
+              break;
 
-            for(size_t j = 0; j < students.size(); j++){
-
-                if(j != i && newid == students[j].getid()){
-                    duplicate = true;
-                    break;
-                }
+              case 4:
+              break;
+              
+              case 5:
+              updating=false;
+              break;
+            
+            default:
+            cout<<"enter vallid option"<<endl;
+              break;
             }
-
-            if(duplicate){
-                cout << "enter other id because it already exists" << endl;
-               
-            }
-            else{
-                // update student
-                 students[i].setid( newid);
-            }
-
-            found = true;
-            break;
+            
+          }
+          break;
+            
         }
+       
+
+       
+            
+        
     }
 
     if(!found){
         cout << "student is not fond" << endl;
     }
 }
+        
 break;
      
      case 6:
