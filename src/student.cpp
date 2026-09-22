@@ -171,3 +171,6 @@ bool Student::input_cour(){
     id=newid;
  }
     
+ void Student::updatename(string newname){
+    name=newname;
+ }

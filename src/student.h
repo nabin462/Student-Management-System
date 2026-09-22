@@ -18,5 +18,6 @@ class Student{
     int update();
     int getnewid();
     void setid(int newid);
+    void updatename(string newname);
 };
 #endif

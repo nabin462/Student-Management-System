@@ -129,8 +129,12 @@ int main(){
             switch (option)
             
             {
-            case 1:
-              /* code */
+            case 1:{
+              string newname;
+              cout<<"enter the name"<<endl;
+              cin>>newname;
+              students[i].updatename(newname);
+            }
               break;
 
               case 2:
