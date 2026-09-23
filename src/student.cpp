@@ -174,3 +174,11 @@ bool Student::input_cour(){
  void Student::updatename(string newname){
     name=newname;
  }
+ void Student::updateage(int newage){
+    age=newage;
+ }
+
+ 
+ void Student::updatecourse(string newcourse){
+    course=newcourse;
+ }

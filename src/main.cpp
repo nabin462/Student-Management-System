@@ -131,19 +131,34 @@ int main(){
             {
             case 1:{
               string newname;
-              cout<<"enter the name"<<endl;
+              cout<<"enter the  update name"<<endl;
               cin>>newname;
               students[i].updatename(newname);
             }
               break;
 
-              case 2:
+              case 2:{
+              int newid;
+              cout<<"enter the update id"<<endl;
+              cin>>newid;
+              students[i].setid(newid);
+              }
               break;
 
-              case 3:
+              case 3:{
+              int newid;
+              cout<<"enter the upadate age"<<endl;
+              cin>>newid;
+              students[i].updateage(newid);
+              }
               break;
 
-              case 4:
+              case 4:{
+              string newcourse;
+              cout<<"enter the update course"<<endl;
+              cin>>newcourse;
+              students[i].updatecourse(newcourse);
+              }
               break;
               
               case 5:
