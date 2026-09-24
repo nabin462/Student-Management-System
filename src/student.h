@@ -15,11 +15,12 @@ class Student{
     bool input_valid();
     bool input_char();
     bool input_cour();
-    int update();
     int getnewid();
     void setid(int newid);
     void updatename(string newname);
     void updateage(int newage);
     void updatecourse(string newcourse);
+    
+
 };
 #endif

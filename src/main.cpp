@@ -131,32 +131,87 @@ int main(){
             {
             case 1:{
               string newname;
+              above:
               cout<<"enter the  update name"<<endl;
               cin>>newname;
-              students[i].updatename(newname);
-            }
+              bool valid=true;
+               for(size_t i=0;i<newname.length();i++)
+    {
+        if(!isalpha(newname[i])){
+            
+            valid=false;
+            break;
+
+        }
+        
+    }
+    if(!valid){
+      cout<<"enter the character not number"<<endl;
+      goto above;
+    }
+    
+      students[i].updatename(newname);
+    
+          }
               break;
+
 
               case 2:{
               int newid;
+              up:
               cout<<"enter the update id"<<endl;
               cin>>newid;
+              if(cin.fail()){
+                cout<<"enter the number only not character"<<endl;
+                cin.clear();
+                cin.ignore(100,'\n');
+                goto up;
+              }
+              bool duplicat=false;
+               for(size_t j=0;j<students.size();j++){
+                if(newid==students[j].getid()){
+                  duplicat=true;
+                  break;
+
+                }
+               }
+               if(duplicat){
+                cout<<"enter the other id because id already exit"<<endl;
+                goto up;
+               }
+              
+              
               students[i].setid(newid);
               }
               break;
 
               case 3:{
-              int newid;
+              int newage;
+              top:
               cout<<"enter the upadate age"<<endl;
-              cin>>newid;
-              students[i].updateage(newid);
+              cin>>newage;
+              if(cin.fail()){
+                cout<<"enter the number only not character"<<endl;
+                cin.clear();
+                cin.ignore(100,'\n');
+                goto top;
+              }
+             
+              students[i].updateage(newage);
               }
               break;
 
               case 4:{
+                first:
               string newcourse;
               cout<<"enter the update course"<<endl;
               cin>>newcourse;
+              for(size_t i=0;i<students.size();i++){
+                if(!isalpha(newcourse[i])){
+                  cout<<"enter the character only not character"<<endl;
+                  goto first;
+                }
+              }
               students[i].updatecourse(newcourse);
               }
               break;
