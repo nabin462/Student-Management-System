@@ -156,20 +156,30 @@ int main(){
               break;
 
 
+
               case 2:{
-              int newid;
+              string newid;
+           
               up:
               cout<<"enter the update id"<<endl;
               cin>>newid;
-              if(cin.fail()){
-                cout<<"enter the number only not character"<<endl;
-                cin.clear();
-                cin.ignore(100,'\n');
-                goto up;
+                 bool valid=true;
+            for(char c:newid){
+              if(!isdigit(c)){
+                valid =false;
+                break;
+
               }
+
+            }
+            if(!valid){
+              cout<<"enter the number only not character"<<endl;
+              goto up;
+            }
+            int id=stoi(newid);
               bool duplicat=false;
                for(size_t j=0;j<students.size();j++){
-                if(newid==students[j].getid()){
+                if(id==students[j].getid()){
                   duplicat=true;
                   break;
 
@@ -181,9 +191,11 @@ int main(){
                }
               
               
-              students[i].setid(newid);
+              students[i].setid(id);
               }
               break;
+
+
 
               case 3:{
               int newage;
