@@ -1,7 +1,21 @@
 #include"student.h"
 #include<vector>
+#include<map>
+#include<string>
 using namespace std;
 vector<Student>students;
+void countcourse(){
+  
+  map<string,int>countcourse;
+  for(size_t i=0;i<students.size();i++){
+    string course=students[i].getcourse();
+    countcourse[course]++;
+  }
+  for (auto item:countcourse){
+    cout<<item.first<<":"<<item.second<<endl;
+  }
+
+}
 
 int main(){
     Student s;
@@ -14,7 +28,8 @@ int main(){
         cout<<"3: search student"<<endl;
         cout<<"4: Delete student"<<endl;
         cout<<"5: update student "<<endl;
-        cout<<"6: Exit"<<endl;
+        cout<<"6: Count the student by course"<<endl;
+        cout<<"7: Exit"<<endl;
         cout<<"Enter your choice"<<endl;
         cin>>choice;
           if(cin.fail()){
@@ -254,8 +269,13 @@ int main(){
 }
         
 break;
+
+
+case 6:
+countcourse();
+break;
      
-     case 6:
+     case 7:
      exit(0);
      
 

@@ -61,9 +61,12 @@ void Student::get(){
 void Student::display(){
     cout<<"Name:"<<name<<"\t"<<"Age:"<<age<<"\t"<<"Id:"<<id<<"\t"<<"Course:"<<course<<endl;
 }
+
+
 int Student::getid(){
     return id;
 }
+
 
 bool Student::input_valid(){
     if(cin.fail()){
@@ -128,6 +131,10 @@ bool Student::input_cour(){
  void Student::updatecourse(string newcourse){
     course=newcourse;
  }
+ 
 
+ string Student::getcourse(){
+    return course;
+ }
 
  

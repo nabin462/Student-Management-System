@@ -20,7 +20,7 @@ class Student{
     void updatename(string newname);
     void updateage(int newage);
     void updatecourse(string newcourse);
-    
+    string getcourse();
 
 };
 #endif
