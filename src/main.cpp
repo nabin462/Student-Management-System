@@ -223,6 +223,10 @@ int main(){
                 cin.ignore(100,'\n');
                 goto top;
               }
+              if(newage<=0){
+                cout<<"enter the age betwen 1-100"<<endl;
+                goto top;
+              }
              
               students[i].updateage(newage);
               }
@@ -233,7 +237,7 @@ int main(){
               string newcourse;
               cout<<"enter the update course"<<endl;
               cin>>newcourse;
-              for(size_t i=0;i<students.size();i++){
+              for(size_t i=0;i<newcourse.length();i++){
                 if(!isalpha(newcourse[i])){
                   cout<<"enter the character only not character"<<endl;
                   goto first;
