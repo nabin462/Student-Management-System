@@ -137,4 +137,11 @@ bool Student::input_cour(){
     return course;
  }
 
- 
+  string Student::getname(){
+    return name;
+  }
+
+  
+  int Student::getage(){
+    return age;
+  }

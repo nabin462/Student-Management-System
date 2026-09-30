@@ -21,6 +21,8 @@ class Student{
     void updateage(int newage);
     void updatecourse(string newcourse);
     string getcourse();
+    string  getname();
+    int getage();
 
 };
 #endif

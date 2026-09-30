@@ -1,0 +1,12 @@
+Name:janu
+Age:45
+ID:80
+Course:llb
+Name:nabin
+Age:20
+ID:25
+Course:bscsit
+Name:raj
+Age:25
+ID:30
+Course:bscit

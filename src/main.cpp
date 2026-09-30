@@ -2,6 +2,7 @@
 #include<vector>
 #include<map>
 #include<string>
+#include<fstream>
 using namespace std;
 vector<Student>students;
 void countcourse(){
@@ -19,6 +20,7 @@ void countcourse(){
 
 int main(){
     Student s;
+ 
     int choice,id;
     bool running=true;
   while(running){
@@ -33,7 +35,7 @@ int main(){
         cout<<"Enter your choice"<<endl;
         cin>>choice;
           if(cin.fail()){
-            cout<<"enter the number only not character"<<endl;
+            cout<<"enter the number only ,not character"<<endl;
             cin.clear();
             cin.ignore(1000,'\n');
             continue;
@@ -43,6 +45,9 @@ int main(){
         
         switch(choice){
             case 1:{
+               ofstream fout;
+  fout.open("students.txt" ,ios::app);
+  
           s.get();
           bool duplicate=false;
           for(size_t i=0;i<students.size();i++){
@@ -57,6 +62,12 @@ int main(){
           if(!duplicate){
           
     students.push_back(s);
+    fout<<"Name:"<<s.getname()<<endl;
+    fout<<"Age:"<<s.getage()<<endl;
+    fout<<"ID:"<<s.getid()<<endl;
+    fout<<"Course:"<<s.getcourse()<<endl;
+    fout.close();
+
           }
         }
           
