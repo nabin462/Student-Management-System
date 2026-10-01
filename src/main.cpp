@@ -73,12 +73,19 @@ int main(){
           
     break;
 
-    case 2:
-     cout<<"the student details"<<endl;
-     for(size_t i=0;i<students.size();i++ ){
-       students[i].display();
+    case 2:{
+    ifstream fin;
+    fin.open("students.txt");
+    string line;
 
-     }
+     cout<<"the student details"<<endl;
+    
+    while (getline(fin, line))
+    {
+        cout << line << endl;
+    }
+        fin.close();
+    }
      break;
 
      case 3:
