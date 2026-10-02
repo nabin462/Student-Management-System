@@ -3,8 +3,48 @@
 #include<map>
 #include<string>
 #include<fstream>
+#include<iostream>
 using namespace std;
 vector<Student>students;
+
+void loadstudent(){
+  ifstream fin;
+  fin.open("students.txt");
+  if(!fin){
+    cout<<"file is not opende"<<endl;
+  }
+  string line;
+  string name,course;
+  int id,age;
+  while(getline(fin,line))
+  {
+    if(line.find("Name:")==0){
+      size_t pos=line.find(':');
+   name=line.substr(pos+1);
+    }
+    if(line.find("Age:")==0){
+      size_t pos=line.find(':');
+      age=stoi(line.substr(pos+1));
+    }
+    if(line.find("ID:")==0){
+      size_t pos=line.find(':');
+      id=stoi(line.substr(pos+1));
+    }
+    if(line.find("Course:")==0){
+      size_t pos=line.find(':');
+      course=line.substr(pos+1);
+        Student a;
+        a.updatename(name);
+        a.updateage(age);
+        a.setid(id);
+        a.updatecourse(course);
+students.push_back(a);
+    }
+  }
+
+}
+  
+
 void countcourse(){
   
   map<string,int>countcourse;
@@ -19,6 +59,7 @@ void countcourse(){
 }
 
 int main(){
+  loadstudent();
     Student s;
  
     int choice,id;

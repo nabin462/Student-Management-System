@@ -10,3 +10,7 @@ Name:raj
 Age:25
 ID:30
 Course:bscit
+Name:abin
+Age:36
+ID:54
+Course:phd
