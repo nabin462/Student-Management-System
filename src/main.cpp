@@ -58,6 +58,21 @@ void countcourse(){
 
 }
 
+void savestudent(){
+  ofstream fout;
+  fout.open("students.txt");
+ for(size_t i=0;i<students.size();i++){
+  fout<<"Name:"<<students[i].getname()<<endl;
+  fout<<"Age:"<<students[i].getage()<<endl;
+  fout<<"ID:"<<students[i].getid()<<endl;
+  fout<<"Course:"<<students[i].getcourse()<<endl;
+
+ }
+  fout.close();
+
+
+}
+
 int main(){
   loadstudent();
     Student s;
@@ -158,7 +173,8 @@ int main(){
      bool found=false;
      for(size_t i=0;i<students.size();i++){
       if(uid==students[i].getid()){
-        students.erase(students.begin()+i);
+        students.erase(students.begin()+i); 
+        savestudent();
         cout<<"student is delete sucessfully"<<endl;
         found =true;
       break;
