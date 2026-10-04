@@ -73,6 +73,8 @@ void savestudent(){
 
 }
 
+
+
 int main(){
   loadstudent();
     Student s;
@@ -325,6 +327,7 @@ int main(){
               case 5:
               updating=false;
               break;
+             
             
             default:
             cout<<"enter vallid option"<<endl;
@@ -332,6 +335,7 @@ int main(){
             }
             
           }
+           savestudent();
           break;
             
         }
