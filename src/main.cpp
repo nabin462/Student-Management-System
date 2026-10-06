@@ -82,14 +82,18 @@ int main(){
     int choice,id;
     bool running=true;
   while(running){
+    
+        cout<<"=========================================="<<endl;
         cout<<"Student Management System"<<endl;
-        cout<<"1: add student"<<endl;
-        cout<<"2: display all student"<<endl;
-        cout<<"3: search student"<<endl;
-        cout<<"4: Delete student"<<endl;
-        cout<<"5: update student "<<endl;
-        cout<<"6: Count the student by course"<<endl;
-        cout<<"7: Exit"<<endl;
+        cout<<"=========================================="<<endl;
+        cout<<"1. Add student"<<endl;
+        cout<<"2. Display all student"<<endl;
+        cout<<"3. Search student"<<endl;
+        cout<<"4. Delete student"<<endl;
+        cout<<"5. Update student "<<endl;
+        cout<<"6. Count the student by course"<<endl;
+        cout<<"7. Exit"<<endl;
+        cout<<"===================================="<<endl;
         cout<<"Enter your choice"<<endl;
         cin>>choice;
           if(cin.fail()){
