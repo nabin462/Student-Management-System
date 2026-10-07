@@ -48,6 +48,9 @@ students.push_back(a);
 void countcourse(){
   
   map<string,int>countcourse;
+  cout<<"======================"<<endl;
+  cout<<"Count course by faculty"<<endl;
+  cout<<"======================"<<endl;
   for(size_t i=0;i<students.size();i++){
     string course=students[i].getcourse();
     countcourse[course]++;
@@ -139,8 +142,9 @@ int main(){
     ifstream fin;
     fin.open("students.txt");
     string line;
-
+    cout<<"================================"<<endl;
      cout<<"the student details"<<endl;
+     cout<<"==============================="<<endl;
     
     while (getline(fin, line))
     {
@@ -152,7 +156,9 @@ int main(){
 
      case 3:
      {
+      cout<<"========================"<<endl;
      cout<<"enter student id"<<endl;
+     cout<<"=========================="<<endl;
      cin>>id;
      bool found=false;
      for(size_t i=0;i<students.size();i++){
@@ -165,7 +171,9 @@ int main(){
      
      }
       if(!found){
+        cout<<"======================="<<endl;
         cout<<"student not found"<<endl;
+        cout<<"======================="<<endl;
       }
     }
      break;
@@ -174,7 +182,9 @@ int main(){
 
      case 4:{
      int uid;
+     cout<<"========================="<<endl;
      cout<<"enter the student id"<<endl;
+     cout<<"========================="<<endl;
      cin>>uid;
      bool found=false;
      for(size_t i=0;i<students.size();i++){
@@ -182,6 +192,7 @@ int main(){
         students.erase(students.begin()+i); 
         savestudent();
         cout<<"student is delete sucessfully"<<endl;
+        cout<<"======================="<<endl;
         found =true;
       break;
 
@@ -190,7 +201,9 @@ int main(){
      }
 
      if(!found){
+      cout<<"========================"<<endl;
       cout<<"student is not found"<<endl;
+      cout<<"========================"<<endl;
      }
     }
      break;
@@ -198,8 +211,9 @@ int main(){
     case 5:
 {
     int sid;
-
+    cout<<"========================="<<endl;
     cout << "enter the student id" << endl;
+    cout<<"========================="<<endl;
     cin >> sid;
 
     bool found = false;
@@ -214,13 +228,17 @@ int main(){
                found = true;
             int option;
             while(updating){
+            cout<<"========================="<<endl;
             cout<<"what do you want to update?"<<endl;
+            cout<<"=========================="<<endl;
             cout<<"1: name"<<endl;
             cout<<"2: ID"<<endl;
             cout<<"3: Age"<<endl;
             cout<<"4: Course"<<endl;
             cout<<"5:Back"<<endl;
+            cout<<"-----------------------"<<endl;
             cout<<"enter the option"<<endl;
+            cout<<"------------------------"<<endl;
             cin>>option;
             switch (option)
             
@@ -228,7 +246,9 @@ int main(){
             case 1:{
               string newname;
               above:
+              cout<<"---------------------"<<endl;
               cout<<"enter the  update name"<<endl;
+              cout<<"----------------------"<<endl;
               cin>>newname;
               bool valid=true;
                for(size_t i=0;i<newname.length();i++)
@@ -296,7 +316,9 @@ int main(){
               case 3:{
               int newage;
               top:
+              cout<<"---------------------"<<endl;
               cout<<"enter the upadate age"<<endl;
+              cout<<"---------------------"<<endl;
               cin>>newage;
               if(cin.fail()){
                 cout<<"enter the number only not character"<<endl;
@@ -316,7 +338,9 @@ int main(){
               case 4:{
                 first:
               string newcourse;
+              cout<<"-------------------------"<<endl;
               cout<<"enter the update course"<<endl;
+              cout<<"-------------------------"<<endl;
               cin>>newcourse;
               for(size_t i=0;i<newcourse.length();i++){
                 if(!isalpha(newcourse[i])){
@@ -352,6 +376,7 @@ int main(){
 
     if(!found){
         cout << "student is not fond" << endl;
+        cout<<"-----------------------"<<endl;
     }
 }
         
