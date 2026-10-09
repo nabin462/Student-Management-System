@@ -1,7 +1,7 @@
-Name:janu
-Age:45
+Name:sanu
+Age:40
 ID:80
-Course:llb
+Course:scs
 Name:nabin
 Age:50
 ID:25
